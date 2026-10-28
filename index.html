@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yazi Zhang</title>
+<meta name="description" content="Yazi Zhang — Software Engineer. MS Computer Science at Northeastern University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e10;
+    --text: #f2f2f3;
+    --muted: #a1a1aa;
+    --faint: #71717a;
+    --line: #27272a;
+    --accent: #8b9cf7;
+    --tag-bg: #18181b;
+    --card: #141417;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 96px 24px 120px; }
+
+  /* Header */
+  h1 { font-size: clamp(44px, 9vw, 72px); font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; }
+  .role { margin-top: 12px; font-size: 18px; color: var(--muted); }
+  .contact { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+  .contact .dot { color: var(--faint); }
+
+  /* Sections */
+  section { margin-top: 64px; }
+  h2 {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 24px;
+  }
+
+  .entry {
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 24px;
+    padding-left: 16px; border-left: 1px solid var(--line);
+  }
+  .entry + .entry { margin-top: 32px; }
+  .entry h3 { font-size: 15px; font-weight: 600; }
+  .entry .sub { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .entry .detail { font-size: 13px; color: var(--faint); margin-top: 4px; }
+  .entry .meta { text-align: right; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .entry .body { grid-column: 1 / -1; }
+  .entry ul { margin-top: 10px; padding-left: 18px; }
+  .entry li { font-size: 13.5px; color: #c4c4cc; margin-top: 6px; }
+  .entry li::marker { color: var(--faint); }
+
+  /* Featured */
+  .featured {
+    display: block; padding: 24px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--card); transition: border-color .15s;
+  }
+  .featured:hover { border-color: var(--accent); text-decoration: none; }
+  .featured h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .featured .tagline { color: var(--accent); font-size: 14px; margin-top: 2px; }
+  .featured p { color: var(--muted); font-size: 13.5px; margin-top: 12px; }
+  .featured .stack { margin-top: 16px; }
+
+  /* Projects */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .card {
+    display: block; padding: 18px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); transition: border-color .15s;
+  }
+  .card:hover { border-color: var(--accent); text-decoration: none; }
+  .card h3 { font-size: 14.5px; font-weight: 600; }
+  .card p { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .card .tech { font-size: 12px; color: var(--faint); margin-top: 10px; }
+
+  /* Skills */
+  .skills { display: grid; gap: 18px; }
+  .skill-row { display: grid; grid-template-columns: 160px 1fr; gap: 12px; align-items: start; }
+  .skill-row h4 { font-size: 13px; font-weight: 500; color: var(--muted); padding-top: 3px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 12px; padding: 3px 10px; border-radius: 999px;
+    background: var(--tag-bg); border: 1px solid var(--line); color: #d4d4d8;
+  }
+
+  footer { margin-top: 80px; font-size: 12px; color: var(--faint); }
+
+  @media (max-width: 600px) {
+    main { padding: 64px 16px 80px; }
+    .entry { grid-template-columns: 1fr; }
+    .entry .meta { text-align: left; }
+    .skill-row { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Yazi Zhang</h1>
+    <p class="role">Software Engineer</p>
+    <div class="contact">
+      <span>Bay Area, CA</span><span class="dot">·</span>
+      <a href="mailto:zhang.yazi06@gmail.com">zhang.yazi06@gmail.com</a><span class="dot">·</span>
+      <a href="https://linkedin.com/in/yazi-zhang-a83440282" target="_blank" rel="noopener">LinkedIn</a><span class="dot">·</span>
+      <a href="https://github.com/lizik01" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div>
+        <h3>Northeastern University</h3>
+        <p class="sub">MS Computer Science</p>
+        <p class="detail">Algorithms, Database Management Systems, Natural Language Processing, Web Development</p>
+      </div>
+      <div class="meta">San Jose, CA<br>Expected May 2028</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <h3>University of the Pacific</h3>
+        <p class="sub">MS Computer Science &nbsp;·&nbsp; GPA 3.78</p>
+        <p class="detail">Data Structures, Operating Systems, Software Engineering</p>
+      </div>
+      <div class="meta">Stockton, CA<br>Dec 2025</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <h3>Northwest University of Political Science and Law</h3>
+        <p class="sub">Bachelor of Administrative Management</p>
+      </div>
+      <div class="meta">Xi’an, China<br>Jul 2018</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured</h2>
+    <a class="featured" href="https://github.com/lizik01/BayPulse" target="_blank" rel="noopener">
+      <h3>BayPulse</h3>
+      <p class="tagline">Find what’s happening across the Bay, on one map.</p>
+      <p>A full-stack app for discovering events across 18 Bay Area cities, built on the Ticketmaster API. REST endpoints with input validation, data normalization, and in-memory caching to protect API quota. City, keyword, category, and date filters live in the URL, and results show on an interactive Leaflet map.</p>
+      <div class="tags stack">
+        <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Leaflet</span>
+      </div>
+    </a>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Email Subscription System</h3>
+        <p>Users sign up for daily emails delivered through Resend. Inngest cron jobs run delivery, and the Vercel AI SDK writes personalized content.</p>
+        <p class="tech">Next.js, Resend, Inngest, Vercel AI SDK</p>
+      </div>
+      <a class="card" href="https://github.com/lizik01" target="_blank" rel="noopener">
+        <h3>GitHub</h3>
+        <p>All my personal projects.</p>
+        <p class="tech">github.com/lizik01 →</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div>
+        <h3>Northeastern University, Silicon Valley Campus</h3>
+        <p class="sub">Student Ambassador &nbsp;·&nbsp; San Jose, CA</p>
+      </div>
+      <div class="meta">May 2026 – Present</div>
+      <div class="body">
+        <ul>
+          <li>Plan and run student events end to end, from scheduling and budgeting to promotion and on-site coordination; support New Student Orientation</li>
+          <li>Analyze post-event feedback with Python (pandas) to guide improvements, raising average satisfaction from 3.6 to 4.5 out of 5 at the Mid-Autumn Festival</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <h3>Shaanxi Huashan Road and Bridge Group</h3>
+        <p class="sub">Administrative &amp; Data Specialist, HR &nbsp;·&nbsp; Xi’an, China</p>
+      </div>
+      <div class="meta">Jul 2018 – 2023</div>
+      <div class="body">
+        <ul>
+          <li>Built a relational payroll database in Microsoft Access (SQL queries, forms, reports) centralizing salary and bonus data for 500+ employees, replacing manual Excel spreadsheets</li>
+          <li>Cut payroll reporting time from 3 days to 1 hour by automating monthly, quarterly, and annual reports across salary, insurance, and benefits data</li>
+          <li>Partnered with Engineering to integrate HR and project data, enabling company-wide reporting across 3 engineering projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-row">
+        <h4>Languages</h4>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">HTML</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <h4>Frameworks &amp; Libraries</h4>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Next.js</span><span class="tag">pandas</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <h4>Tools &amp; Platforms</h4>
+        <div class="tags">
+          <span class="tag">Git</span><span class="tag">Vite</span><span class="tag">Leaflet</span><span class="tag">Vercel</span><span class="tag">Render</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Yazi Zhang</footer>
+</main>
+</body>
+</html>
